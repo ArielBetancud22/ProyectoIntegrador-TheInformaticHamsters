@@ -1,16 +1,6 @@
-
-package dominio;
-
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
-
-/**
-Poryecto Integrador:       
-    " PARKING 2.0 "
+/*
+Proyecto Integrador:       
+    PARKING 2.0
 
 Grupo: 
     The Informatic Hamsters
@@ -24,8 +14,18 @@ Integrantes:
     - Quispe, Marcelo Alejandro
     - Quiquinto Romina Ayelen
     - Segovia, Jorge Nicolas
-
  */
+
+package dominio;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
+
 public class Program {
     public static Scanner entrada = new Scanner(System.in);
     //Diccionario "Base de Datos"
@@ -248,19 +248,17 @@ public class Program {
     // ABRIR o CERRAR BARRERA**********************************************************************************************************************************************
     
     
-    // ATC - 1ra PARTE - 2da PARTE
-    // ****************************************************************************************************************************************
+    // ATC - 1ra PARTE - 2da PARTE ****************************************************************************************************************************************
     
     // Menu verificador de ticket de cliente.*****************************************************************************************************
     
     // Menu Cobro********************************************************************************************************************************
     
-    //// GUARDIA********************************************************************************************************************************
+    // GUARDIA********************************************************************************************************************************
     
     // MENU CNR*******************************************************************************************************************************
     
     // UTILIDADES******************************************************************************************************************************
-
     // Limpiar pantalla (Consola)
     public static void limpiarPantallaConsola() {
         try {
