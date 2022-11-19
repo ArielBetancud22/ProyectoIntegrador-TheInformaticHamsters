@@ -245,8 +245,35 @@ public class Program {
 
     } // Fin Main
     
+     public static void mostrarClientesAbonados(HashMap<Integer, String> listaClientesAbonados) {
+        Integer clave;
+        Iterator<Integer> clienteAbonado = listaClientesAbonados.keySet().iterator();
+        System.out.println("Clientes con abono vigente:");
+        while(clienteAbonado.hasNext()){
+            clave = clienteAbonado.next();
+            System.out.println(clave + " - " + listaClientesAbonados.get(clave));
+        }        
+    } 
+     
     // ABRIR o CERRAR BARRERA**********************************************************************************************************************************************
-    
+    // Metodo encargado de la apertura de la barrera, el mismo es el que decide si
+    // la barrera da error o no por medio de Azar.
+    // Tambien es el encargado de redirigirnos o a la guardia o directamente a la
+    // apertura de la barrera.
+    public static void seAbreBarrera() {
+        Random bool = new Random();
+        int barreraRota = bool.nextInt(2);
+
+        if (barreraRota == 0) {
+            animacionSolicitarBarrera();
+            
+            limpiarPantallaConsola();
+            subAnimacionDespedida();
+        } else {
+            animacionSolicitarBarrera();
+            animacionDeBarreraRedirigiendoAGuardia();
+        }
+    } // Fin seAbreBarrrera
     
     // ATC - 1ra PARTE - 2da PARTE ****************************************************************************************************************************************
     
