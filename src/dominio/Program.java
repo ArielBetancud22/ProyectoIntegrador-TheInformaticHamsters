@@ -279,6 +279,46 @@ public class Program {
     
     // Menu verificador de ticket de cliente.*****************************************************************************************************
     
+    public static void menuATC() {
+        int opcion;
+        tituloATC();
+        System.out.print("		Ingrese el número de ticket otorgado al Cliente: ");
+        int nroTicket = Integer.parseInt(entrada.nextLine());
+        // Validamos que el número de Ticket sea el correcto.
+        while (nroTicket != 1234) {
+            limpiarPantallaConsola();
+            tituloATC();
+            animacionVerificacionDeDatos();
+            limpiarPantallaConsola();
+            tituloATC();
+            System.out.println(
+                    "                                                                 ¡Número de ticket incorrecto!");
+            System.out.println("");
+            System.out.print("		Ingrese nuevamente el número de ticket: ");
+            nroTicket = Integer.parseInt(entrada.nextLine());
+        }
+        limpiarPantallaConsola();
+        tituloATC();
+        System.out.println("		MENU: ");
+        System.out.println("");
+        System.out.println("		1. Efectuar cobro");
+        System.out.println("		2. MENU PRINCIPAL");
+        System.out.println("");
+        System.out.print("		Ingrese una opción deseada: ");
+        opcion = Integer.parseInt(entrada.nextLine());
+        System.out.println("");
+        switch (opcion) {
+            case 1:
+                // Llama a un procedimiento para realizar el cobro
+                animacionFormasDePago();
+                menuCobro();
+                break;
+            case 2:
+                Parking.main(null);
+                break;
+        }
+    } // Fin menuATC
+
     // Menu Cobro********************************************************************************************************************************
     // Sub Menu para tipo de cobro para cliente CNR, con un Segun de dos opciones,
     	// Cobro al contado y Cobro por debito (cobro por tarjeta valida n tarjeta
