@@ -480,7 +480,81 @@ public class Program {
     } // Fin Guardia
     
     // MENU CNR*******************************************************************************************************************************
-    
+    // Para los Clientes no registrados, desde esta interfaz se les informa el valor
+    // de la estadia, y se le otorga un numero para su validacion
+    // el mismo numero por el momento solo sera "1234". este mismo numero se
+    // validara una vez que el cliente decida "Pagar Ticket", lo
+    // cual lo rediririgira hacia "menuATC()". La segunda opcion simplemente
+    // finaliza la ejecucion dando una despedida.
+    public static void menuCRN() {
+
+        int opcion;
+
+        tituloATC();
+        System.out.println(
+                "                                                            #########################################");
+        System.out.println(
+                "                                                            #   El servicio de parking cuesta $150  #");
+        System.out.println(
+                "                                                            #                                       #");
+        System.out.println(
+                "                                                            #   Su número de Ticket es el * 1234 *  #");
+        System.out.println(
+                "                                                            #########################################");
+        System.out.println(" ");
+        System.out.println("		MENU: ");
+        System.out.println(" ");
+        System.out.println("		1. ACEPTAR");
+        System.out.println("		2. CANCELAR / MENU PRINCIPAL");
+        System.out.println(" ");
+        System.out.print("		Ingrese una opcion deseada: ");
+        opcion = Integer.parseInt(entrada.nextLine());
+
+        do {
+            switch (opcion) {
+                case 1:
+                    esperar(4);
+                    limpiarPantallaConsola();
+                    menuATC();
+                    esperar(3);
+                    break;
+                case 2:
+                    limpiarPantallaConsola();
+                    esperar(4);
+                    tituloATC();
+                    System.out.println(" ");
+                    System.out.println("                                           Speach Sugerido:  '' Lamentamos que no pueda quedarse, lo esperamos en otra oportunidad. '' ");
+                    // Aqui no utilizamos SubAnimacionDespedida(), porque epara este evento no se
+                    // necesitaria abrir barrera.
+                    esperar(4);
+                    System.out.println(" ");
+                    continuarConOtroCliente();
+                    break;
+                default:
+                    limpiarPantallaConsola();
+                    tituloATC();
+                    System.out.println(
+                            "                                                            #########################################");
+                    System.out.println(
+                            "                                                            #   El servicio de parking cuesta $150  #");
+                    System.out.println(
+                            "                                                            #                                       #");
+                    System.out.println(
+                            "                                                            #   El número de Ticket es el * 1234 *  #");
+                    System.out.println(
+                            "                                                            #########################################");
+                    System.out.println(" ");
+
+                    System.out.println("		MENU: ");
+                    System.out.println(" ");
+                    System.out.println("		1. ACEPTAR");
+                    System.out.println("		2. CANCELAR / MENU PRINCIPAL");
+                    opcionInvalidaParaMenu();
+                    opcion = Integer.parseInt(entrada.nextLine());
+                    limpiarPantallaConsola();
+            }
+        } while (opcion != 1 || opcion != 2);
+    } // Fin CRN
     // UTILIDADES******************************************************************************************************************************
     // Limpiar pantalla (Consola)
     public static void limpiarPantallaConsola() {
