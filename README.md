@@ -7,5 +7,6 @@ Migración del Proyecto de Parking, de PSeInt a Java (De Programación Orientada
 ### - Primera etapa "Migración de Tecnología". ✓
   - Refactorización y Corrección de errores. ✓
 
-### - Segunda etapa "Migración de paradigma (a POO)"
+### - Segunda etapa "Migración de paradigma (a POO)".
+  - Aplicar mejoras.
   - Agregar un Log.
