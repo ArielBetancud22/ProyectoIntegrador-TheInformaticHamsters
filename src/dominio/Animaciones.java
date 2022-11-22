@@ -1,10 +1,12 @@
 package dominio;
 
-import static dominio.Program.entrada;
 import static dominio.Program.guardia;
+import java.util.Scanner;
+
 
 
 public class Animaciones extends Utilidades  {
+    public static Scanner lectura = new Scanner(System.in);
     //ANIMACIONES-UI********************************************************************************************************************************************************
     /* 
      * Estaran encargadas de darle mas realizmo a la aplicación, también son las
@@ -410,6 +412,7 @@ public class Animaciones extends Utilidades  {
 
     // Continuar con otro Cliente o Salir?
     public void continuarConOtroCliente() {
+        
         int opcionElegida;
         System.out.println("");
         System.out.println("");
@@ -419,19 +422,29 @@ public class Animaciones extends Utilidades  {
         System.out.println("		                                                2. Salir");
         System.out.println("");
         System.out.print("		                                                Ingrese una opción deseada: ");
-        opcionElegida = Integer.parseInt(entrada.nextLine());
-        if (opcionElegida == 1) {
+        opcionElegida = lectura.nextInt();
+        do {
+            if (opcionElegida == 1) {
             limpiarPantalla();
             // Vuelve a ejecutar el main
             Program.main(null);
-        } else {
-            System.out.println("");
-            System.out.println(" ");
-            System.out.println(" ");
-            System.out.println(
-                    "                                                              Gracias por su visita en Hamster Mall.");
-            esperar(2);
-        }
+            } else if (opcionElegida == 2) {
+                System.out.println("");
+                System.out.println(" ");
+                System.out.println(" ");
+                System.out.println("                                                              Gracias por su visita en Hamster Mall.");
+                esperar(2);
+                break;
+            } else {
+                opcionElegida = 0;
+                System.out.println("");
+                System.out.println("                                                                      Opción inválida ");
+                System.out.println(" ");
+                System.out.print("		                                                Ingrese una opción válida deseada: ");
+                opcionElegida = lectura.nextInt();
+            }
+        } while (opcionElegida == 1 || opcionElegida == 2);
+        
     } // Fin continuarConOtroCliente
 } // Fin Clase
 

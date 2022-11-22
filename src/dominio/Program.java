@@ -18,9 +18,6 @@ Integrantes:
 
 package dominio;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -31,14 +28,14 @@ import java.util.Scanner;
 
 public class Program {
     public static Scanner entrada = new Scanner(System.in);
+    public static Scanner entrada2 = new Scanner(System.in);
     //Diccionario "Base de Datos"
-    public static HashMap<Integer, String> listaClientesAbonados = new HashMap<Integer, String>();
+    public static HashMap<Integer, String> listaClientesAbonados = new HashMap<>();
     //Contadores de ingresos para arqueo de caja
     public static int ingresoCNR;
     public static int ingresoAbonado;   
     
     
-    // MAIN
      public static void main(String[] args) {
         
         String nombreCompleto;
@@ -64,7 +61,7 @@ public class Program {
         System.out.println("		4. Arqueo de caja");
         System.out.println("");
         System.out.print("		Ingrese una opción deseada: ");
-        opcion = Integer.parseInt(entrada.nextLine());
+        opcion = entrada.nextInt();
         u.limpiarPantalla();
         a.tituloATC();       
         switch (opcion) { 
@@ -82,18 +79,17 @@ public class Program {
                 System.out.println("		4. MENU PRINCIPAL");
                 System.out.println("");
                 System.out.print("		Ingrese una opción deseada: " );
-                opcion = Integer.parseInt(entrada.nextLine());
+                opcion = entrada.nextInt();
                 u.limpiarPantalla();
                 switch(opcion) {
                     case 1:
                         a.tituloATC();
                         System.out.print("Introduce el DNI del Cliente: ");
-                        String dniString = entrada.next();
-                        dni = Integer.parseInt(dniString);
+                        dni = Integer.parseInt(entrada.next());
                         //Boolean dcBool = listaClientesAbonados.containsKey(dniCliente);
                         System.out.println("");
                         if (listaClientesAbonados.containsKey(dni)){
-                            String clienteAbonado = listaClientesAbonados.get(dni).toString();
+                            String clienteAbonado = listaClientesAbonados.get(dni);
                             System.out.println("");
                             System.out.print("Se encuentra un Usuario Vigente: ");
                             System.out.println(clienteAbonado);
@@ -199,12 +195,13 @@ public class Program {
                     System.out.print("Introduce el nombre completo del Cliente: ");
                     nombreCompleto = ca.next();
                     listaClientesAbonados.put(dni, nombreCompleto);  
+                    ingresoAbonado++;  
                 }
                 u.esperar(4);
                 a.animacionVerificacionDeDatos();
                 u.limpiarPantalla();
                 a.tituloATC();
-                System.out.println("                                                       ¡Cliente Registrado Exitosamente!");
+                System.out.println("                                                              ¡Cliente Registrado Exitosamente!");
                 System.out.println("");
                 a.continuarConOtroCliente();
                 break;
@@ -213,8 +210,8 @@ public class Program {
                 a.continuarConOtroCliente();
                 break;
             case 4: 
-                // En este menu podemos ir registrando el mongo en nuestro arqueo de caja, se suman los CNR y dan conteo, clientes Abonados (registrados)
-                // con exepcion de clientes que ingresan con OC.
+                // En este menu podemos ir registrando el mongo en nuestro arqueo de caja, se suman los CNR y 
+                // dan conteo, clientes Abonados (registrados) con exepcion de clientes que ingresan con OC.
                 u.limpiarPantalla();
                 a.tituloATC();
                 
@@ -243,7 +240,7 @@ public class Program {
                 System.out.println("		3. Registro de Usuarios");
                 System.out.println("		4. Arqueo de caja");
                 a.opcionInvalidaParaMenu();
-                opcion = Integer.parseInt(entrada.nextLine());
+                opcion = entrada.nextInt();
                 u.limpiarPantalla();
                 break;
         }
@@ -260,7 +257,7 @@ public class Program {
         }        
     } 
      
-    // ABRIR o CERRAR BARRERA**********************************************************************************************************************************************
+    // ABRIR o CERRAR BARRERA***************************************************************************************
     // Metodo encargado de la apertura de la barrera, el mismo es el que decide si
     // la barrera da error o no por medio de Azar.
     // Tambien es el encargado de redirigirnos o a la guardia o directamente a la
@@ -283,10 +280,9 @@ public class Program {
         }
     } // Fin seAbreBarrrera
     
-    // ATC - 1ra PARTE - 2da PARTE ****************************************************************************************************************************************
     
-    // Menu verificador de ticket de cliente.*****************************************************************************************************
-    
+    // ATC *******************************************************************************************************************
+    // Menu verificador de ticket de cliente.*******************************************************************************
     public static void menuATC() {
         Utilidades u = new Utilidades();
         Animaciones a = new Animaciones();
@@ -294,7 +290,7 @@ public class Program {
         
         a.tituloATC();
         System.out.print("		Ingrese el número de ticket otorgado al Cliente: ");
-        int nroTicket = Integer.parseInt(entrada.nextLine());
+        int nroTicket = entrada.nextInt();
         // Validamos que el número de Ticket sea el correcto.
         while (nroTicket != 1234) {
             u.limpiarPantalla();
@@ -316,7 +312,7 @@ public class Program {
         System.out.println("		2. MENU PRINCIPAL");
         System.out.println("");
         System.out.print("		Ingrese una opción deseada: ");
-        opcion = Integer.parseInt(entrada.nextLine());
+        opcion = entrada.nextInt();
         System.out.println("");
         switch (opcion) {
             case 1:
@@ -337,7 +333,7 @@ public class Program {
         public static void menuCobro() {
             
         int efectivo, opcion, clave;
-        long numTarjeta;
+        String numTarjeta;
         Utilidades u = new Utilidades();
         Animaciones a = new Animaciones();
         
@@ -350,7 +346,7 @@ public class Program {
         System.out.println("		3. MENU PRINCIPAL");
         System.out.println(" ");
         System.out.print("		Ingrese una opción deseada: ");
-        opcion = Integer.parseInt(entrada.nextLine());
+        opcion = entrada.nextInt();
         System.out.println(" ");
 
         do {
@@ -360,7 +356,7 @@ public class Program {
                     a.tituloATC();
                     System.out.println("		Valor del TICKET $150");
                     System.out.print("		Ingrese el monto a cobrar: ");
-                    efectivo = Integer.parseInt(entrada.nextLine());
+                    efectivo = entrada.nextInt();
                     ingresoCNR++;
                     a.animacionProcesandoPago();
                     System.out.println("");
@@ -375,7 +371,7 @@ public class Program {
                     a.tituloATC();
                     // Ingreso de numero de Tarjeta
                     System.out.print("		Ingrese el número de tarjeta (10 dígitos): ");
-                    numTarjeta = Long.parseLong(entrada.nextLine());
+                    numTarjeta = entrada.nextLine();
 
                     // Parseo el int en string para utilizar metodo length y así validar la cantidad
                     // de caracteres.
@@ -386,7 +382,7 @@ public class Program {
                         System.out.println("		El número de tarjeta debe tener 10 digitos");
                         System.out.println("");
                         System.out.print("		Ingrese nuevamente el número de tarjeta del cliente ");
-                        numTarjeta = Long.parseLong(entrada.nextLine());
+                        numTarjeta = entrada.nextLine();
                         length = String.valueOf(numTarjeta).length();
                     }
                     u.limpiarPantalla();
@@ -394,7 +390,7 @@ public class Program {
                     // Ingreso de Clave de la Tarjeta
                     System.out.println("");
                     System.out.print("		Ingrese la clave de seguridad: ");
-                    clave = Integer.parseInt(entrada.nextLine());
+                    clave = entrada.nextInt();
                     // Valido cantidad de números de la clave de la Tarjeta
                     length = String.valueOf(clave).length();
                     while (length != 3) {
@@ -404,7 +400,7 @@ public class Program {
                         length = String.valueOf(clave).length();
                     }
                     
-                    while (numTarjeta != 1234567890 && clave != 123)  {
+                    while (numTarjeta != "1234567890" && clave != 123)  {
                            u.limpiarPantalla();
                            a.tituloATC();
                            System.out.print("		                               ================== "); 
@@ -413,7 +409,7 @@ public class Program {
                            System.out.print("");	
                            // Ingreso de numero de Tarjeta
                            System.out.print("		Ingrese nuevamente el número de tarjeta (10 dígitos): ");
-                           numTarjeta = Long.parseLong(entrada.nextLine());
+                           numTarjeta = entrada.nextLine();
                            // Parseo el int en string para utilizar metodo length y así validar la cantidad
                            // de caracteres.
                            length = String.valueOf(numTarjeta).length();
@@ -421,7 +417,7 @@ public class Program {
                            while (length != 10) {
                                System.out.println("		El número de tarjeta debe tener 10 digitos");
                                System.out.println("		Ingrese nuevamente el número de tarjeta del cliente ");
-                               numTarjeta = Long.parseLong(entrada.nextLine());
+                               numTarjeta = entrada.nextLine();
                                length = String.valueOf(numTarjeta).length();
                            }
                            u.limpiarPantalla();
@@ -505,8 +501,8 @@ public class Program {
     public static void menuCRN() {
         Utilidades u = new Utilidades();
         Animaciones a = new Animaciones();
-        int opcion;
-
+        int opcion = 0;
+         
         a.tituloATC();
         System.out.println(
                 "                                                            #########################################");
@@ -525,17 +521,14 @@ public class Program {
         System.out.println("		2. CANCELAR / MENU PRINCIPAL");
         System.out.println(" ");
         System.out.print("		Ingrese una opcion deseada: ");
-        opcion = Integer.parseInt(entrada.nextLine());
-
+       
+        opcion = entrada2.nextInt();
         do {
-            switch (opcion) {
-                case 1:
+            if (opcion == 1) {
                     u.esperar(4);
                     u.limpiarPantalla();
                     menuATC();
-                    u.esperar(3);
-                    break;
-                case 2:
+           } else if (opcion == 2) {
                     u.limpiarPantalla();
                     u.esperar(4);
                     a.tituloATC();
@@ -547,7 +540,7 @@ public class Program {
                     System.out.println(" ");
                     a.continuarConOtroCliente();
                     break;
-                default:
+            } else {
                     u.limpiarPantalla();
                     a.tituloATC();
                     System.out.println(
@@ -572,5 +565,4 @@ public class Program {
             }
         } while (opcion != 1 || opcion != 2);
     } // Fin CRN
-   
-}
+} // Fin Program
