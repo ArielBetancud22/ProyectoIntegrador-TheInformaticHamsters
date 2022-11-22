@@ -45,9 +45,14 @@ public class Program {
         Animaciones a = new Animaciones();
         Scanner ca = new Scanner(System.in);
         // Clientes previamente registrados en "Base de Datos"
-        listaClientesAbonados.put(34898489, "Nicolas Segovia");
-        listaClientesAbonados.put(33333333, "Pepe Grillo");
-        listaClientesAbonados.put(22222222, "Pikachu Pokemon");
+        listaClientesAbonados.put(43777070, "ACOSTA, Nadia Yanella");
+        listaClientesAbonados.put(38647183, "DEALBERA ETCHECHOURY, Giuliana");
+        listaClientesAbonados.put(31646497, "DIAZ LUNA, Giuliana Paola");
+        listaClientesAbonados.put(27208272, "NOLAN, Juan Pablo");
+        listaClientesAbonados.put(34091492, "QUIQUINTO, Romina Ayelén");
+        listaClientesAbonados.put(29293724, "QUISPE, RODRIGUEZ SAQUILAN, Miguel");
+        listaClientesAbonados.put(18889456, "RODRIGUEZ SAQUILAN, Miguel");
+        listaClientesAbonados.put(34898489, "SEGOVIA, Jorge Nicolás");
         
         // Menu principal, donde registraremos Usuario en la Matriz, Ingresaremos a un sub menu para dar ingreso al servicio 
         //de parking a los distintos Cleintes, Podremos listar el Registro de Usuario y solicitar el Arqueo de Caja.
