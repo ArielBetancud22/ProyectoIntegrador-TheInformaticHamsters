@@ -1,4 +1,4 @@
-<h1 align="center"> The Informatic Hamsters </h1>
+<h1 align="center"> The Informatic Hamsters 🐹</h1>
 <h3 align="center"> Parking 2.0 </h3>
 
 <p align="center">Migración del Proyecto de Parking, de PSeInt a Java (De Programación Orientada a Procedimiento a POO)</p>
@@ -46,6 +46,19 @@
   <img src="https://media3.giphy.com/media/26wkt1Bw1lKWNxZOE/giphy.gif?cid=790b761194b1ac0d87be24034b03b9b6af0242dd4a0ccfea&rid=giphy.gif&ct=g" alt="End-img" />
 </p>
 </details> 
+
+
+<h3> 👯 Integrantes: </h3>
+<ul>
+  <li>Acosta, Nadia Yanella </li>
+  <li>Dealbera Etchechoury, Giuliana</li>
+  <li>Diaz Luna, Giuliana Paola</li>
+  <li>Nolan, Juan Pablo</li>
+  <li>Rodriguez Saquilan, Miguel</li>
+  <li>Quiquinto, Romina Ayelen</li>
+  <li>Quispe, Marcelo Alejandro</li>
+  <li>Segovia, Jorge Nicolas</li>
+</ul>
 <br>
 
 ---
