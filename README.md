@@ -9,7 +9,8 @@
 <p align="center">
   <img src="https://media1.giphy.com/media/4PLVKYah7HvOoLNBQW/giphy.gif?cid=ecf05e47hgpnwfh4uciy3w4vxjatd2pbrtafy7lxwridw5xb&rid=giphy.gif&ct=g" alt="WelcomeParking-img" />
 </p>
-  
+
+<br>
 <details> 
   <summary><H3>💻 Pasos para ejecutar por medio de CMD o Power Shell (no IDE)</summary></H3>
   
@@ -45,9 +46,9 @@
   <img src="https://media3.giphy.com/media/26wkt1Bw1lKWNxZOE/giphy.gif?cid=790b761194b1ac0d87be24034b03b9b6af0242dd4a0ccfea&rid=giphy.gif&ct=g" alt="End-img" />
 </p>
 </details> 
+<br>
 
+---
+<b>Proyecto anterior (PSeInt): <a href="https://github.com/Nico-Segovia/ProjectParking" target="_blank">**Parking 1.0**</a></b>
 
-<p align="center">
-  <img src="https://media3.giphy.com/media/PlswMewFkdPpqGdQ1i/giphy.gif?cid=790b7611efe2f6e179214c367a16abf6d7cd1e25c325e785&rid=giphy.gif&ct=g" alt="HamstersDancing"/>
-</p>
 
