@@ -7,7 +7,7 @@ Migración del Proyecto de Parking, de PSeInt a Java (De Programación Orientada
 ### 1- Dentro del IDE NetBeans, presionar "Clean and Buld Project" (Shift+F11)
 ![image](https://user-images.githubusercontent.com/86338019/203802092-8e9f5cc2-faaa-41c0-9474-e208a0147a87.png)
 
-### 2- En la ventana de Output, seleccionar la línea de comando que se encuentra en la imagen.
+### 2- En la ventana de Output, seleccionar la línea de comando como la que se encuentra en la imagen.
 (Es la continua a "To run this application from the command line without Ant, try:")
 ![image](https://user-images.githubusercontent.com/86338019/203802834-1194a204-abe7-47fe-9f6d-86cb7f534461.png)
 
