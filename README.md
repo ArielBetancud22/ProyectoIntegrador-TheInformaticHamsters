@@ -13,17 +13,17 @@
 <details> 
   <summary><H3>👨‍💻 Pasos para ejecutar por medio de CMD o Power Shell (no IDE)</summary></H3>
   
-  ### 1- Dentro del IDE NetBeans, presionar "Clean and Buld Project" (Shift+F11)
+  #### 1- Dentro del IDE NetBeans, presionar "Clean and Buld Project" (Shift+F11)
   ![image](https://user-images.githubusercontent.com/86338019/203802092-8e9f5cc2-faaa-41c0-9474-e208a0147a87.png)
 
-  ### 2- En la ventana de Output, seleccionar la línea de comando como la que se encuentra en la imagen.
+  #### 2- En la ventana de Output, seleccionar la línea de comando como la que se ve en la imagen.
   (Es la continua a "To run this application from the command line without Ant, try:")
   ![image](https://user-images.githubusercontent.com/86338019/203802834-1194a204-abe7-47fe-9f6d-86cb7f534461.png)
 
-  ### 3- Abrir un CMD o Power Shell, y pegar la línea copiada en el paso 2. 
+  #### 3- Abrir un CMD o Power Shell, y pegar la línea copiada en el paso 2. 
   ![image](https://user-images.githubusercontent.com/86338019/203803815-817a6354-a899-4906-9c11-5ce086155b26.png)
 
-  ### 4- Presionar ENTER.
+  #### 3.1- Presionar ENTER.
   ![image](https://user-images.githubusercontent.com/86338019/203803943-f7144beb-fbee-44c6-b5dd-f081bd0c034b.png)
 </details> 
 
