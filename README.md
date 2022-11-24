@@ -11,7 +11,7 @@
 </p>
   
 <details> 
-  <summary><H3>👨‍💻 Pasos para ejecutar por medio de CMD o Power Shell (no IDE)</summary></H3>
+  <summary><H3>💻 Pasos para ejecutar por medio de CMD o Power Shell (no IDE)</summary></H3>
   
   #### 1- Dentro del IDE NetBeans, presionar "Clean and Buld Project" (Shift+F11)
   ![image](https://user-images.githubusercontent.com/86338019/203802092-8e9f5cc2-faaa-41c0-9474-e208a0147a87.png)
@@ -29,7 +29,7 @@
 
 
 <details> 
-  <summary><H3>✨ Todavía a realizar:</H3></summary>
+  <summary><H3>🔧 Todavía a realizar:</H3></summary>
   <H4>Primera etapa "Migración de Tecnología". ✓</H4>
   <ul>
   <li>Refactorización y Corrección de errores. ✓</li>
