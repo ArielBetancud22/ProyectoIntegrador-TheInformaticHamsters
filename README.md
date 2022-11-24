@@ -11,7 +11,7 @@
 </p>
   
 <details> 
-  <summary><H3>👨‍💻Ejecución por medio de CMD o Power Shell (Consola, no IDE)</summary></H3>
+  <summary><H3>👨‍💻 Pasos para ejecutar por medio de CMD o Power Shell (no IDE)</summary></H3>
   
   ### 1- Dentro del IDE NetBeans, presionar "Clean and Buld Project" (Shift+F11)
   ![image](https://user-images.githubusercontent.com/86338019/203802092-8e9f5cc2-faaa-41c0-9474-e208a0147a87.png)
@@ -46,6 +46,8 @@
 </p>
 </details> 
 
+
 <p align="center">
   <img src="https://media3.giphy.com/media/PlswMewFkdPpqGdQ1i/giphy.gif?cid=790b7611efe2f6e179214c367a16abf6d7cd1e25c325e785&rid=giphy.gif&ct=g" alt="HamstersDancing"/>
 </p>
+
