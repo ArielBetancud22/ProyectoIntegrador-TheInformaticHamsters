@@ -1,29 +1,25 @@
 package dominio;
 
-import static dominio.Program.guardia;
 import java.util.Scanner;
+/*
+Estaran encargadas de darle mas realizmo a la aplicación, también son las encargadas de ahorranos lineas de codigo,
+ya que por ejemplo los "titulos" los utilizamos una y otra vez, los creariamos una sola vez como un SubProceso y los 
+llamariamos constantemente donde se los requiera.
+La mayor parte dan un valor visual, otros contendran otras animaciones internarnas y otras serán las encargadas de 
+redirigirnos hacia otros menus o métodos.
 
+Titulos para las diferentes ventanas por las cuales se navegara
+TituloCreditos(), TituloATC(), TituloGuardia() y TituloSistema()
+Animacion de tipo visual
+*/
 
 
 public class Animaciones extends Utilidades  {
     public static Scanner lectura = new Scanner(System.in);
-    //ANIMACIONES-UI********************************************************************************************************************************************************
-    /* 
-     * Estaran encargadas de darle mas realizmo a la aplicación, también son las
-     * encargadas de ahorranos lineas de codigo,
-     * ya que por ejemplo los "titulos" los utilizamos una y otra vez, los
-     * creariamos una sola vez como un SubProceso y los llamariamos
-     * constantemente donde se los requiera.
-     * La mayor parte dan un valor visual, otros contendran otras animaciones
-     * internarnas y otras serán las encargadas de redirigirnos
-     * hacia otros menus o métodos.
-     * 
-     * Titulos para las diferentes ventanas por las cuales se navegara
-     * TituloCreditos(), TituloATC(), TituloGuardia() y TituloSistema()
-     * Animacion de tipo visual
-     */
+    //ANIMACIONES-UI*****************************************************************************************************
+    
 
-    public void tituloATC() {
+    public static void tituloATC() {
         System.out.println(
                 "-------------------------------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>--------------------------------------------------------");
         System.out.println(
@@ -35,7 +31,7 @@ public class Animaciones extends Utilidades  {
         System.out.println("");
     } // Fin tituloATC
 
-    public void tituloGuardia() {
+    public static void tituloGuardia() {
         System.out.println(
                 "-------------------------------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>--------------------------------------------------------");
         System.out.println(
@@ -47,7 +43,7 @@ public class Animaciones extends Utilidades  {
         System.out.println("");
     } // Fin tituloGuardia
 
-    public void tituloSistema() {
+    public static void tituloSistema() {
         System.out.println(
                 "-------------------------------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>--------------------------------------------------------");
         System.out.println(
@@ -60,13 +56,13 @@ public class Animaciones extends Utilidades  {
     } // Fin tituloSistema
 
     // SubAnimacion para ser llamada desde la "animacionDeBarrera()"
-    public void tituloSubAnimacionDeBarrera() {
+    public static void tituloSubAnimacionDeBarrera() {
         System.out.println("		Se ha detectado que el error es debido a un problema de conexión: ");
         System.out.println(" ");
     } // Fin tituloSubAnimacionDeBarrera
 
     // For en metodo para animar textos en las animaciones de ATC
-    public void forDeAnimarAnimacionesATC(int tiempo, String mensaje) {
+    public static void forDeAnimarAnimacionesATC(int tiempo, String mensaje) {
         for (int i = 0; i <= 2; i = i + 1) {
             limpiarPantalla();
             tituloATC();
@@ -88,12 +84,12 @@ public class Animaciones extends Utilidades  {
         }
     } // Fin forDeAnimarAnimacionesATC
 
-    public void animacionFormasDePago() {
+    public static void animacionFormasDePago() {
         forDeAnimarAnimacionesATC(4, "Cargando formas de pago, aguarde");
         limpiarPantalla();
     } // Fin animacionFormasDePago
 
-    public void opcionInvalidaParaMenu() {
+    public static void opcionInvalidaParaMenu() {
         System.out.println(" ");
         System.out.println(" ");
         System.out.println(
@@ -106,7 +102,7 @@ public class Animaciones extends Utilidades  {
         System.out.print("		Ingrese nuevamente una opción deseada: ");
     } // Fin opcionInvalidaParaMenu
 
-    public void animacionProcesandoPago() {
+    public static void animacionProcesandoPago() {
         limpiarPantalla();
         tituloATC();
         esperar(4);
@@ -115,14 +111,14 @@ public class Animaciones extends Utilidades  {
         System.out.println("		                                               ¡El pago se realizó correctamente!");
     } // Fin animacionProcesandoPago
 
-    public void animacionVerificacionDeDatos() {
+    public static void animacionVerificacionDeDatos() {
         limpiarPantalla();
         tituloATC();
         esperar(4);
         forDeAnimarAnimacionesATC(4, "Verificando datos, aguarde un momento");
     } // Fin animacionVerificacionDeDatos
 
-    public void animacionSolicitarBarrera() {
+    public static void animacionSolicitarBarrera() {
         limpiarPantalla();
         tituloATC();
         esperar(4);
@@ -133,7 +129,7 @@ public class Animaciones extends Utilidades  {
     // necesita ser verificado por "Guardia()"
     // posteriormente. Tambien se utilizaria en el momento que Guardia() realiza la
     // verificacion.
-    public void subAnimacionError() {
+    public static void subAnimacionError() {
         limpiarPantalla();
         tituloSistema();
         esperar(4);
@@ -245,7 +241,7 @@ public class Animaciones extends Utilidades  {
     // medio de Azar), es la encargada
     // de notificar al usuario, y también es la encargada de redireccionar hacia
     // "Guardia()"
-    public void animacionDeBarreraRedirigiendoAGuardia() {
+    public static void animacionDeBarreraRedirigiendoAGuardia() {
         limpiarPantalla();
         subAnimacionError();
         esperar(7);
@@ -280,12 +276,12 @@ public class Animaciones extends Utilidades  {
             esperar(6);
         }
         limpiarPantalla();
-        guardia();
+        Guardia.guardia();
     } // Fin animacionDeBarreraRedirigiendoAGuardia
 
     // Animacion para simular reconexion de barrera desde "Guardia()", la misma
     // tambien da cierre el programa.
-    public void animacionDeBarrera() {
+    public static void animacionDeBarrera() {
         esperar(4);
         subAnimacionError();
         esperar(12);
@@ -327,7 +323,7 @@ public class Animaciones extends Utilidades  {
 
     // Animacion para simulacion de barrera en estado de OK y despedida para
     // clientes.
-    public void subAnimacionDespedida() {
+    public static void subAnimacionDespedida() {
         for (int i = 0; i <= 2; i = i + 1) {
             limpiarPantalla();
             tituloATC();
@@ -411,7 +407,7 @@ public class Animaciones extends Utilidades  {
     } // Fin subAnimacionDespedida
 
     // Continuar con otro Cliente o Salir?
-    public void continuarConOtroCliente() {
+    public static void continuarConOtroCliente() {
         
         int opcionElegida;
         System.out.println("");
@@ -434,7 +430,7 @@ public class Animaciones extends Utilidades  {
                 System.out.println(" ");
                 System.out.println("                                                              Gracias por su visita en Hamster Mall.");
                 esperar(2);
-                break;
+                System.exit(0);
             } else {
                 opcionElegida = 0;
                 System.out.println("");
