@@ -1,7 +1,7 @@
-<h1 align="center"> The Informatic Hamsters <h1/>
-<h3 align="center"> Parking 2.0 <h3/>
+<h1 align="center"> The Informatic Hamsters </h1>
+<h3 align="center"> Parking 2.0 </h3>
 
-<p>Migración del Proyecto de Parking, de PSeInt a Java (De Programación Orientada a Procedimiento a POO)<p/>
+<p>Migración del Proyecto de Parking, de PSeInt a Java (De Programación Orientada a Procedimiento a POO)</p>
   
 <br>
 <br>
@@ -11,7 +11,7 @@
 </p>
   
 <details> 
-  <summary><H2>Ejecución por medio de CMD o Power Shell (Consola, no IDE)</summary><H2/>
+  <summary><H3>👨‍💻Ejecución por medio de CMD o Power Shell (Consola, no IDE)</summary></H3>
   
   ### 1- Dentro del IDE NetBeans, presionar "Clean and Buld Project" (Shift+F11)
   ![image](https://user-images.githubusercontent.com/86338019/203802092-8e9f5cc2-faaa-41c0-9474-e208a0147a87.png)
@@ -27,29 +27,26 @@
   ![image](https://user-images.githubusercontent.com/86338019/203803943-f7144beb-fbee-44c6-b5dd-f081bd0c034b.png)
 </details> 
 
-<p align="center">
-  <img src="https://media3.giphy.com/media/26wkt1Bw1lKWNxZOE/giphy.gif?cid=790b761194b1ac0d87be24034b03b9b6af0242dd4a0ccfea&rid=giphy.gif&ct=g" alt="End-img" />
-</p>
-
-<br>
-<br>
 <br>
 
 <details> 
-  <summary><H2>✨ Todavía a realizar:<H2/>
-  <li><H3>Primera etapa "Migración de Tecnología". ✓<H3>
+  <summary><H3>✨ Todavía a realizar:</H3></summary>
+  <H4>Primera etapa "Migración de Tecnología". ✓</H4>
   <ul>
   <li>Refactorización y Corrección de errores. ✓</li>
   </ul>
 
-  <H3>Segunda etapa "Migración de paradigma (a POO)".<H3>
+  <H4>Segunda etapa "Migración de paradigma (a POO)".</H4>
   <ul>
   <li>Aplicar mejoras.</li>
   <li>Agregar Log.</li>
   </ul>
+  
+  <p align="center">
+  <img src="https://media3.giphy.com/media/26wkt1Bw1lKWNxZOE/giphy.gif?cid=790b761194b1ac0d87be24034b03b9b6af0242dd4a0ccfea&rid=giphy.gif&ct=g" alt="End-img" />
+</p>
 </details> 
 
-
 <p align="center">
-  <img src="https://media3.giphy.com/media/PlswMewFkdPpqGdQ1i/giphy.gif?cid=790b7611efe2f6e179214c367a16abf6d7cd1e25c325e785&rid=giphy.gif&ct=g" alt="HamstersDancing" />
+  <img src="https://media3.giphy.com/media/PlswMewFkdPpqGdQ1i/giphy.gif?cid=790b7611efe2f6e179214c367a16abf6d7cd1e25c325e785&rid=giphy.gif&ct=g" alt="HamstersDancing"/>
 </p>
