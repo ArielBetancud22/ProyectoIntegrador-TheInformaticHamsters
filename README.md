@@ -1,7 +1,7 @@
 <h1 align="center"> The Informatic Hamsters </h1>
 <h3 align="center"> Parking 2.0 </h3>
 
-<p>Migración del Proyecto de Parking, de PSeInt a Java (De Programación Orientada a Procedimiento a POO)</p>
+<p align="center">Migración del Proyecto de Parking, de PSeInt a Java (De Programación Orientada a Procedimiento a POO)</p>
   
 <br>
 <br>
@@ -27,7 +27,6 @@
   ![image](https://user-images.githubusercontent.com/86338019/203803943-f7144beb-fbee-44c6-b5dd-f081bd0c034b.png)
 </details> 
 
-<br>
 
 <details> 
   <summary><H3>✨ Todavía a realizar:</H3></summary>
