@@ -51,7 +51,7 @@
 </details>
 
 <details> 
-  <summary><H3>🔧 Etapas a realizadas:</H3></summary>
+  <summary><H3>🔧 Etapas realizadas:</H3></summary>
   <H4>Primera etapa "Migración de Tecnología". ✓</H4>
   <ul>
   <li>Refactorización. ✓</li>
