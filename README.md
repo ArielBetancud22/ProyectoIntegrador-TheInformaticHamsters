@@ -33,7 +33,25 @@
 </details>
 
 <details> 
-  <summary><H3>🔧 Etapas a realizar:</H3></summary>
+  <summary><H3>🐱‍👤 Datos útiles para utilizar la App:</H3></summary>
+  <H4>Ordenes de Compras:</H4>
+  <ul>
+  <li>1111</li>
+  <li>2222</li>
+  <li>3333</li>
+  <li>4444</li>
+  <li>5555</li>
+  </ul>
+
+  <H4>Tarjeta de Crédito:</H4>
+  <ul>
+  <li>Num. de tarjeta: 1234567890</li>
+  <li>Cod. de seguridad: 123</li>
+  </ul>
+</details>
+
+<details> 
+  <summary><H3>🔧 Etapas a realizadas:</H3></summary>
   <H4>Primera etapa "Migración de Tecnología". ✓</H4>
   <ul>
   <li>Refactorización. ✓</li>
